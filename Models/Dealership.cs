@@ -17,7 +17,7 @@ namespace Dealership.Models {
         }
 
         public string GetMakeModel () {
-            return _makeModel;
+            return _makeModel; //now every time we want to use or reference makeModel, we have to call GetMakeModel (line 40 of Program.cs)
         }
         public int GetPrice () {
             return _price;

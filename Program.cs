@@ -37,7 +37,7 @@ namespace Dealership {
                 Console.WriteLine ("You need mo scrilla");
             } else {
                 foreach (Car automobile in CarsMatchingSearch) {
-                    Console.WriteLine (automobile.GetMakeModel());
+                    Console.WriteLine (automobile.GetMakeModel()); //compare to public version, where it's automobile.makeModel. We can't do that after making _makeModel private.
                     Console.WriteLine (automobile.GetDescription());
                     
 
