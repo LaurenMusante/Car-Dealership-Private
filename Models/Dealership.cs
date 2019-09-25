@@ -30,6 +30,15 @@ namespace Dealership.Models {
             return _description;
         }
 
+        public static string SetSound(string newSound)
+        {
+             return "Our cars sound like " + newSound;
+        }
+         public void SetPrice(int newPrice)
+        {
+        _price = newPrice;
+        }
+
         public bool WorthBuying (int maxPrice) {
             return (_price < maxPrice);
         }

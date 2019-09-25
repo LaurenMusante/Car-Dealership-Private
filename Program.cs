@@ -10,7 +10,7 @@ namespace Dealership {
             Car yugo = new Car ("1980 Yugo Koral", 700, 56000, "old shitty car");
             Car ford = new Car ("1988 Ford Country Squire", 1400, 239001, "older shitty car");
             Car amc = new Car ("1976 AMC Pacer", 400, 198000, "shitty car");
-            Console.WriteLine(amc.GetMakeModel());
+            amc.SetPrice(200);
 
             List<Car> Cars = new List<Car> () { volkswagen, yugo, ford, amc };
             Console.WriteLine ("Which car would you like to see info on?");
@@ -38,9 +38,9 @@ namespace Dealership {
             } else {
                 foreach (Car automobile in CarsMatchingSearch) {
                     Console.WriteLine (automobile.GetMakeModel()); //compare to public version, where it's automobile.makeModel. We can't do that after making _makeModel private.
-                    Console.WriteLine (automobile.GetDescription());
-                    
-
+                    Console.WriteLine (automobile.GetDescription()); //use "automobile" because we are calling GetDescription on an instance of Car.
+                    Console.WriteLine(Car.SetSound("Zip!")); //use "Car" because we are calling SetSound on the actual whole class of "Car". All cars go "Zip!"
+                    Console.WriteLine(automobile.GetPrice());//use "automobile" because we are calling GetPrice on an instance of Car (in this case, the amc).
                 }
             }
 
